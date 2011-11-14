@@ -7,17 +7,40 @@ Gem::Specification.new do |s|
   s.version     = Zimdb::VERSION
   s.authors     = ["Indro De"]
   s.email       = ["indro.de@gmail.com"]
-  s.homepage    = "http://ms.indrode.com/i/zimdb"
+  #s.homepage    = "http://ms.indrode.com/i/zimdb"
+  s.homepage    = "https://github.com/indrode/zimdb"
   s.summary     = %q{Wrapper for imdbapi.com}
   s.description = %q{Access movie information from IMDb via the API offered by http://www.imdbapi.com/}
 
   s.rubyforge_project = "zimdb"
-
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  
+  s.files = [
+    ".gitignore",
+    "Gemfile",
+    "README.md",
+    "Rakefile",
+    "zimdb.gemspec",
+    "lib/zimdb.rb",
+    "lib/zimdb/hash.rb",
+    "lib/zimdb/movie.rb",
+    "lib/zimdb/version.rb",
+    "spec/fixtures/asdasd.json",
+    "spec/fixtures/hangover.json",
+    "spec/hash_spec.rb",
+    "spec/movie_spec.rb",
+    "spec/spec_helper.rb",
+    "spec/zimdb_spec.rb"
+  ]
+  s.test_files = [
+    "spec/hash_spec.rb",
+    "spec/movie_spec.rb",
+    "spec/spec_helper.rb",
+    "spec/zimdb_spec.rb"
+  ]
+  
   s.require_paths = ["lib"]
-
+  s.rubygems_version = Zimdb::VERSION
+  
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
   s.add_runtime_dependency "httparty"
