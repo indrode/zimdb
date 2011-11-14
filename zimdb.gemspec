@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Zimdb::VERSION
   s.authors     = ["Indro De"]
   s.email       = ["indro.de@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://ms.indrode.com/i/zimdb"
   s.summary     = %q{Wrapper for imdbapi.com}
   s.description = %q{Access movie information from IMDb via the API offered by http://www.imdbapi.com/}
 
@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_runtime_dependency "httparty"
   s.add_development_dependency "rspec", "~> 2.6"
+  s.add_development_dependency "fakeweb", "~> 1.3"
+
 end
