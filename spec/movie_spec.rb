@@ -16,7 +16,7 @@ describe Zimdb::Movie do
     @movie.title.should == "The Hangover"
   end
   
-  it "should return the title" do
+  it "should return the year" do
     @movie.year.should == 2009
   end
   
