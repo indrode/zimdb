@@ -1,4 +1,7 @@
 class Hash
+  # Transforms hash keys into symbols.
+  # 
+  # @return [Hash] the transformed hash
   def symbolize_keys
     t = self.dup
     self.clear
