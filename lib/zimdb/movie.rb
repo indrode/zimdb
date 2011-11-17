@@ -2,7 +2,8 @@ module Zimdb
   class Movie
     
     def initialize(params)
-      @json = JSON.parse(HTTParty.get("http://www.imdbapi.com/?t=#{params[:title]}")).symbolize_keys
+      title = URI::encode(params[:title])
+      @json = JSON.parse(HTTParty.get("http://www.imdbapi.com/?t=#{title}")).symbolize_keys
     end
     
     def response

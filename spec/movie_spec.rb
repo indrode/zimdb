@@ -4,12 +4,19 @@ describe Zimdb::Movie do
   before(:each) do
     @movie = Zimdb::Movie.new(:title => "Hangover")
     @movie.response.should == true
-  end
+  end  
   
   it "should return a false response if not found" do
     movie2 = Zimdb::Movie.new(:title => "asdasd")
     movie2.response.should == false
     movie2.title.should be_nil
+  end
+
+  it "should allow more than one word in movie title" do
+    movie3 = Zimdb::Movie.new(:title => "The Hangover")
+    movie3.response.should == true
+    movie3.title.should == "The Hangover"
+    movie3.year.should == 2009
   end
 
   it "should return the title" do
