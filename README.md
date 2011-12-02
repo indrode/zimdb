@@ -15,6 +15,11 @@ Now you can do things like this:
 	movie.director     # => "Todd Phillips"
 	# and more...
 
+You may also find a movie via its IMDb id:
+
+	movie = Zimdb::Movie.new(:id => "tt0151804")
+	movie.title        # => "Office Space"
+
 Check out [this spec file](https://github.com/indrode/zimdb/blob/master/spec/movie_spec.rb) to see which movie attributes are currently available.
 
 ##License
