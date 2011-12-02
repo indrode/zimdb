@@ -14,5 +14,5 @@ RSpec.configure do |config|
   FakeWeb.register_uri(:get, "http://www.imdbapi.com/?t=Hangover", :body => open(fixture("hangover.json")))
   FakeWeb.register_uri(:get, "http://www.imdbapi.com/?t=The%20Hangover", :body => open(fixture("hangover.json")))
   FakeWeb.register_uri(:get, "http://www.imdbapi.com/?t=asdasd", :body => open(fixture("asdasd.json")))
-  
+  FakeWeb.register_uri(:get, "http://www.imdbapi.com/?i=tt0151804", :body => open(fixture("office_space.json")))
 end
