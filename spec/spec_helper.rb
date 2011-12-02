@@ -9,6 +9,8 @@ RSpec.configure do |config|
     File.dirname(__FILE__) + '/fixtures/' + filename
   end
   
+  config.color_enabled = true
+  
   FakeWeb.register_uri(:get, "http://www.imdbapi.com/?t=Hangover", :body => open(fixture("hangover.json")))
   FakeWeb.register_uri(:get, "http://www.imdbapi.com/?t=The%20Hangover", :body => open(fixture("hangover.json")))
   FakeWeb.register_uri(:get, "http://www.imdbapi.com/?t=asdasd", :body => open(fixture("asdasd.json")))
